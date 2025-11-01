@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-pink: hsl(275, 100%, 97%);
+  --Grayish-purple: hsl(292, 16%, 49%);
+  --Grayish-purple2: hsl(293, 80%, 51%);
+  --Dark-purple: hsl(292, 42%, 14%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  font-size: 62.5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: "Work Sans", sans-serif;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--Light-pink);
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bg_img .pattern {
+  width: 100%;
+}
+
+.pattern-mobile {
+  display: none;
+}
+
+.container {
+  max-width: 47rem;
+  width: 90vw;
+  min-height: auto;
+  background-color: var(--White);
+  padding: 3rem 2.5rem 2rem;
+  margin: 0 auto;
+  border-radius: 1.1rem;
+  box-shadow: 0 10px 5px var(--Light-pink);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.faq-star {
+  width: 2.4rem;
+}
+
+.faq-heading {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--Dark-purple);
+}
+
+.faq-question1 {
+  border-top: 1px solid var(--Light-pink);
+  padding: 1.5rem 0;
+}
+
+.faq {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--Dark-purple);
+}
+
+h2:hover {
+  color: var(--Grayish-purple2);
+  cursor: pointer;
+}
+
+.icon-plus {
+  width: 2.4rem;
+  cursor: pointer;
+}
+
+.icon-minus {
+  width: 2.4rem;
+  cursor: pointer;
+}
+
+.icon-minus-active {
+  display: none;
+}
+
+.faq-text {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--Grayish-purple);
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+.open {
+  display: block;
+}
+
+/* // 500px */
+@media (max-width: 31.875rem) {
+  html {
+    font-size: 55%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* // 450px */
+@media (max-width: 28.125rem) {
+  html {
+    font-size: 62.5%;
+  }
+  .container {
+    max-width: 35rem;
+  }
+
+  .pattern-desktop {
+    display: none;
+  }
+
+  .pattern-mobile {
+    display: block;
+  }
+}
+
+/* // 380px */
+@media (max-width: 23.75rem) {
+  .container {
+    max-width: 30rem;
+  }
+}
+
+/* // 300px */
+@media (max-width: 20.625rem) {
+  html {
+    font-size: 60%;
+  }
+  .container {
+    max-width: 27rem;
   }
 }
